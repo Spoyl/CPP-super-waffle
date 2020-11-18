@@ -6,9 +6,9 @@ using namespace std;
 
 int main(){
     int height;
-    cout << "Choose the height of the pyramid (1-10): ";
+    cout << "Choose the height of the pyramid (1-20): ";
     cin >> height;
-    if (height>10){
+    if (height>20){
         cout << "Value is too high!";
         return 1;
     }
@@ -20,8 +20,7 @@ int main(){
         string row = "*";
         int width = height + (height-1);
         for (int i = 0; i<height; i++){
-            //cout << setw(height-i) << row << "\n";
-            cout <<setw(width-i) << row << "\n";
+            cout << setw(width-(height-i)+1) << row << "\n";
             row+=" *";
         }
     }
